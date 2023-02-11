@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -R ugox+X
+chmod -R 640 444
