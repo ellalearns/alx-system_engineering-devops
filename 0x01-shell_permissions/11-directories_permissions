@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -R 640 444
+chmod -R a+X
