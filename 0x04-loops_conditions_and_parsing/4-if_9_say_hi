@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# if it's the 9th iteration, it says hi
+counter=1
+while [ $counter -le 10 ]
+do
+echo "Best School"
+if [ $counter -eq 9 ]
+then
+echo "Hi"
+fi
+((counter++))
+done
