@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# displays to infinity and beyond an infinite number of times
+counter=2
+while [ $counter -le 3 ]
+do
+echo "To infinity and beyond"
+sleep 2
+done
+
