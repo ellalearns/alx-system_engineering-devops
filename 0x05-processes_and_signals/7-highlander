@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# displays words indefinitely and on receiving SIGTERM signal
+trap "echo 'I am invincible!!!'" SIGTERM
+counter=0
+while [ $counter -le 1 ]
+do
+echo "To infinity and beyond"
+sleep 2
+done
+
