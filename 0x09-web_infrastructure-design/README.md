@@ -45,3 +45,15 @@ There are no firewalls to monitor traffic and no HTTPS to secure HTTP
 .
 No server monitoring to minimize downtime and security breaches
 ### Task 2 - Secured and monitored web infrastructure
+The firewalls were added to monitor and filter the traffic coming into the system. 
+The SSL certificate encrypts the traffic.   
+Three monitoring clients to monitor uptime and traffic.
+Firewalls monitor and filter traffic.
+Traffic is encrypted for security.
+I'm using three monitoring tools.
+###### Issues here
+The single SSL certificate on the load balancer is an SPOF. Also, only one database accepting writes at a time causes issues like data loss if it's not replicated on the replica fast enough before a downtime. All servers having the same components might cause issues like data loss if there's not a properly configured syncronization system.
+### Task 3 - Scale up
+A new load balancer server to provide redundancy and minimize downtimes.
+Components are split between servers to reduce the load on a server at each time. Switching to Active-Active-Active server configuration.
+
