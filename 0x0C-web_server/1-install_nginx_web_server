@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# installs an nginx server on a new ubuntu machine
+# nginx server will be listening on port 80
+# will respond with the string Hello World when queried at the root with a GET curl request
+#systemctl is not allowed for restarting nginx
+
+echo "installing nginx"
+sudo apt-get -y update
+sudo apt-get -y install nginx
+
+echo "enabling nginx on port"
+sudo ufw allow 'Nginx HTTP'
+
+echo "starting nginx"
+sudo service nginx start
+
+echo "modifying permissions for users to create or edit content in root directory"
+sudo chown -R $USER:$USER /var/www/html
+sudo chmod -R 755 /var/www
+
+echo "creating new index"
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+
+echo "restart nginx"
+sudo service nginx restart
