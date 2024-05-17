@@ -3,6 +3,7 @@
 # remove the default sites
 # create a symbolic link to the default file
 # restart nginx server
-rm /etc/nginx/sites-enabled/default
+cd /etc/nginx/sites-enabled/ || exit
+rm default
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
