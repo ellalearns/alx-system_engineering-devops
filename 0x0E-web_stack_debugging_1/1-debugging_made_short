@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# make the previous debugging more straignt to the point -- shorter and sweeter
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart
+pkill -9 -f "/usr/sbin/nginx"
