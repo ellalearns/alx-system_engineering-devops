@@ -18,8 +18,11 @@ def number_of_subscribers(subreddit):
     else:
         subreddit = str(subreddit)
         URL = "https://www.reddit.com/r/" + subreddit + "/about.json"
+        headers = {
+            "User-Agent": "ella\'s api-advanced task 0"
+        }
         try:
-            response = requests.get(URL)
+            response = requests.get(URL, headers=headers)
             print(response.status_code)
             if response.status_code != 200:
                 return 0
