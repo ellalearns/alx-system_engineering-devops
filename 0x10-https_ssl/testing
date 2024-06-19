@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+RESULT=$(dig lb-01.ellacodes.tech)
+OUTPUT=$(echo "$RESULT" | awk -v "lb-01.ellacodes.tech")
+if [ -n "$OUTPUT" ]; then
+    echo " $OUTPUT"
+else
+    echo "NONE"
+fi

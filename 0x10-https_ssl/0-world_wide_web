@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# accepts domain and subdomain to get some info about site
+
+func () {}
