@@ -22,7 +22,9 @@ def number_of_subscribers(subreddit):
             "User-Agent": "ella\'s api-advanced task 0"
         }
         try:
-            response = requests.get(URL, headers=headers)
+            response = requests.get(URL,
+                                    headers=headers,
+                                    allow_redirects=False)
             if response.status_code != 200:
                 return 0
             else:
