@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-gets the top 10 hot posts 
+gets the top 10 hot posts
 for a given subbreddit
 """
 
@@ -14,7 +14,7 @@ def top_ten(subreddit):
     for a subreddit
     """
     if not subreddit:
-        print("None\n")
+        print("None")
     else:
         subreddit = str(subreddit)
         URL = "https://www.reddit.com/r/" + subreddit + "/hot.json"
@@ -34,6 +34,6 @@ def top_ten(subreddit):
                 except Exception:
                     pass
             else:
-                print("None\n")
+                print("None")
         except Exception:
-            print("None\n")
+            print("None")
