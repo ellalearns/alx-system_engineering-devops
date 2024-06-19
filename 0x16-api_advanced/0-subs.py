@@ -13,7 +13,7 @@ def number_of_subscribers(subreddit):
     gets the number of subscribers ..
     .. of a subreddit
     """
-    if not subreddit:
+    if subreddit is None:
         return 0
     else:
         subreddit = str(subreddit)
