@@ -10,7 +10,7 @@ import requests
 
 def top_ten(subreddit):
     """
-    returns the top 10 hot posts
+    prints the top 10 hot posts
     for a subreddit
     """
     if not subreddit:
@@ -21,9 +21,15 @@ def top_ten(subreddit):
         headers = {
             "User-Agent": "ella\'s api-advanced task 1"
         }
+        others = {
+            "limit": "10"
+        }
         hot_posts = []
         try:
-            response = requests.get(URL, headers=headers)
+            response = requests.get(URL,
+                                    headers=headers,
+                                    params=others,
+                                    allow_redirects=False)
             if response.status_code == 200:
                 response = response.json()
                 for post in response["data"]["children"]:
