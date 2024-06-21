@@ -1,0 +1,3 @@
+### Debugging a WebStack #3
+...
+Trying to solve and automate solving a 500 server error
