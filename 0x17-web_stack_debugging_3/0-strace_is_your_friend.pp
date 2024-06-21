@@ -5,6 +5,6 @@
 $file_name = '/var/www/html/wp-settings.php'
 
 exec { 'replace-phpp-with-php':
-    command => "sed -i 's/phpp/php/g' $file_name"
-    path    => "/usr/local/bin/:/bin/"
+    command => "sed -i 's/phpp/php/g' ${file_name}",
+    path    => '/usr/local/bin/:/bin/'
 }
