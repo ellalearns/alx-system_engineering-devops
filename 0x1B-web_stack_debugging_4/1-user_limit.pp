@@ -7,10 +7,10 @@ $path = '/usr/local/bin/:/bin/'
 
 exec { 'increase-hard-file-access-for-holberton':
     command => "sed -i ${user_hard_file} ${file_name}",
-    path    => ${path}
+    path    => "${path}"
 }
 
 exec { 'increase-soft-file-access-for-holberton':
     command => "sed -i ${user_soft_file} ${file_name}",
-    path    => ${path}
+    path    => "${path}"
 }
