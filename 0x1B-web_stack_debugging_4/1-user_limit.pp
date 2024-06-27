@@ -6,11 +6,11 @@ $file_name = '/etc/security/limits.conf'
 $path = '/usr/local/bin/:/bin/'
 
 exec { 'increase-hard-file-access-for-holberton':
-    command => 'sed -i ${user_hard_file} ${file_name}',
+    command => "sed -i ${user_hard_file} ${file_name}",
     path    => ${path}
 }
 
 exec { 'increase-soft-file-access-for-holberton':
-    command => 'sed -i ${user_soft_file} ${file_name}',
+    command => "sed -i ${user_soft_file} ${file_name}",
     path    => ${path}
 }
