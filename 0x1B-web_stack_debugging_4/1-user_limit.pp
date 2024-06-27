@@ -1,7 +1,7 @@
 # allow user holberton access to nginx server
 
-$user_soft_file = '/holberton soft/s/4/50000'
-$user_hard_file = '/holberton hard/s/5/50000/'
+$user_soft_file = 'holberton soft nofile 50000'
+$user_hard_file = 'holberton hard nofile 50000/'
 $file_name = '/etc/security/limits.conf'
 
 exec { 'increase-hard-file-access-for-holberton':
