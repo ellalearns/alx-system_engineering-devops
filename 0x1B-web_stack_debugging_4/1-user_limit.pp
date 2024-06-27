@@ -2,7 +2,7 @@
 
 $user_soft_file = '/holberton soft/s/4/70000'
 $user_hard_file = '/holberton soft/s/5/70000/'
-$file_name = '/etc/security/limits/conf'
+$file_name = '/etc/security/limits.conf'
 $path = '/usr/local/bin/:/bin/'
 
 exec { 'increase-hard-file-access-for-holberton'
