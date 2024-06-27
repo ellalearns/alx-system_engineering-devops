@@ -8,7 +8,7 @@ $com_seq   = 's/15/4096/'
 exec { 'increase-traffic-limit':
     command => "sed -i ${com_seq} ${file_name}",
     path    => '/usr/local/bin/:/bin/'
-} ->
+}
 
 # restart nginx
 exec {'restart-nginx':
